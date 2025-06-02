@@ -1,3 +1,5 @@
+#1.join if similar words are there else only join the word , so before joining lower and split the words etc
+# remeber to put lower , close the f string , default parameters should be at the last 
 import gensim.downloader as api
 
 print("Loading pre-trained GloVe model")
@@ -17,6 +19,7 @@ def enrich_prompt(prompt, model, topn_similar=2):
         similar_terms = get_similar_words(word, model, topn_similar)
         if similar_terms:
             enriched_parts.append(f"{word} ({', '.join(similar_terms)})")
+             
         else:
             enriched_parts.append(word)
     return " ".join(enriched_parts)

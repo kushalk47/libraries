@@ -1,13 +1,14 @@
-
-
 from gensim.models import KeyedVectors
 
 # Load pre-trained GloVe vectors (100-dimensional)
 from gensim.downloader import load
+print("loading the model")
 word_vectors = load('glove-wiki-gigaword-100')  # Automatically downloads the model
+print("model loaded")
 
 # Example 1: Animal relationship (kitten → cat, puppy → dog)
 result = word_vectors.most_similar(positive=['kitten', 'dog'], negative=['cat'], topn=1)
+print(result)
 print("Result of 'kitten - cat + dog':", result[0][0])  # Expected output: 'puppy' or a related word
 
 # Example 2: Fruit relationship (orange → fruit, mango → tropical fruit)
