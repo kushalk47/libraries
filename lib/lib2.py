@@ -1,5 +1,8 @@
-# Install required libraries
-#!pip install gensim matplotlib scikit-learn numpy
+#key components to remeber tsne(n_components,perplexity=5,random_state=42)
+#tsne.fit_transformer()
+#creating a numpy array after getting the vectors
+# word_vector comes under keyedvector and we can directly pass the vector to the model initialized
+# the s parameter is kinda important 
 
 import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
@@ -32,11 +35,11 @@ for i, word in enumerate(filtered_tech_words):
     plt.text(reduced_vectors[i, 0]+0.02, reduced_vectors[i, 1]+0.02, word, fontsize=12)
 
 plt.title("t-SNE Visualization of Technology Words", fontsize=14)
-plt.xticks([])  # Remove ticks for clean look
+plt.xticks([])  
 plt.yticks([])
 plt.show()
 
-# Generate 5 semantically similar words for a given input word
+
 input_word = 'computer'
 try:
     similar_words = word_vectors.most_similar(input_word, topn=5)

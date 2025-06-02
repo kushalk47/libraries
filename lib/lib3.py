@@ -1,13 +1,7 @@
-# Install required library if you haven't already
-# If you're running this in a Jupyter notebook or similar environment, uncomment the line below:
-# !pip install gensim
-
+#sentences,vector_size,window,min_count,workers,epochs
 from gensim.models import Word2Vec
 
-# Step 1: Create a small dataset (list of medical-related word lists)
-# This `medical_data` is a list of "sentences," where each "sentence" is itself a list of words.
-# This is the format Gensim's Word2Vec model expects for training data.
-# The model learns word relationships by analyzing which words appear together in these contexts.
+
 medical_data = [
     ["patient", "doctor", "nurse", "hospital", "treatment"],
     ["cancer", "chemotherapy", "radiation", "surgery", "recovery"],

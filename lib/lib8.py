@@ -2,13 +2,11 @@ from langchain.llms import Cohere
 from langchain.prompts import PromptTemplate
 from langchain import LLMChain
 
-
-
 with open("bmw.txt", "r") as f:
     text = f.read()
 
 
-cohere_api_key = "vGt7iJva8GXi7vcq5U8VD4RmPIPVdjVH8hEZFc0T"
+cohere_api_key = ""
 
 prompt = PromptTemplate(
     input_variables=["text"],

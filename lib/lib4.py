@@ -1,5 +1,6 @@
 #1.join if similar words are there else only join the word , so before joining lower and split the words etc
 # remeber to put lower , close the f string , default parameters should be at the last 
+# while doing list compression , you can't initialize any values but instead you act on the values that are returned 
 import gensim.downloader as api
 
 print("Loading pre-trained GloVe model")

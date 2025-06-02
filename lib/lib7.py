@@ -1,3 +1,6 @@
+# text , max_length, min_length , do_sample , 
+# it will return a list which has tuple inside it with [0][summary text] you can access it 
+
 from transformers import pipeline
 
 summarizer = pipeline("summarization")
